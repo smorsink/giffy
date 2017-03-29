@@ -15,7 +15,8 @@ double I_em(double alphao, double eta){
  calphae=eta*cos(alphao);
  if(calphae>1.0 || calphae<0.0) I=0;
  // else I=I_o*(1.0-0.5*calphae)*CU(eta*sqrt(1.0-2.0*M/R)); //Beamed emission
-  else I=I_o*pow(eta*sqrt(1.0-2.0*M/R),4)*eta; //Bolometric Blackbody Isotropic
+ // else I=I_o*pow(eta*sqrt(1.0-2.0*M/R),4); //Bolometric Blackbody Isotropic
+  else I=I_o*pow(eta*sqrt(1.0-2.0*M/R),3); // Single emitted frequency in the co-rotating frame; Isotropic
  return I;
 }
 
