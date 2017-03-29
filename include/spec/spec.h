@@ -17,7 +17,7 @@ double I_em(double alphao, double eta){
  // beam=(1-calphae);
  calphae=eta*cos(alphao);
  if(calphae>1) I=0;
- else I=I_o*beam*CU(eta)*eta;
+ else I=I_o*beam*CU(eta); // Narrow emitted line in the co-rotating frame
  return I;
 }
 
