@@ -32,7 +32,7 @@ double F, cphi[np+1], sphi[np+1], cthet[np+1], sthet[np+1], dphi, dtheta;
 FILE *out1, *out2;
 char outname[30];
 
- printf("Hello! I'm Newtonian \n");
+ printf("Hello! I'm creating a Newtonian star! \n");
 
 dphi=2.0*pi/((double) np);  
 dtheta=2.0*pi/((double) np);

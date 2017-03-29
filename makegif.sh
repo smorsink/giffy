@@ -21,16 +21,29 @@ base="/Users/sharon/Dropbox/code/Brock"
 
 make all
 
-## MAKING THE DATA FILE
+## Create the directory structure if it doesn't already exist
 if test ! -d "out"
    	then mkdir -p "out"
 fi
 if test ! -d "out/newt"
    	then mkdir -p "out/newt"
 fi
-./newt
-gnuplot < out/newtout.plt
-#times
+if test ! -d "out/spec"
+   	then mkdir -p "out/spec"
+fi
+if test ! -d "out/schw"
+   	then mkdir -p "out/schw"
+fi
 
+# Create the Newtonian Star Files
+./newt
+# Gnuplot creates the Newtonian gif
+gnuplot < out/newtout.plt
+
+# Create the Special Relativistic Files
 ./spec
+gnuplot < out/specout.plt
+
+#Create the Schwarzschild+Doppler Files
 ./schw
+gnuplot < out/schwout.plt

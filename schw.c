@@ -38,6 +38,8 @@ char outname[35];
 
 FILE *out1, *out2;
 
+ printf("Hello! I'm making a rotating star in the Schwarzschild+Doppler Approximation!");
+
 dphi=2.0*pi/((double) np);  
 dtheta=2.0*pi/((double) np);
 
@@ -88,7 +90,7 @@ for(t=0; t<tmax; t+=dt){
 	sprintf(outname, "out/schw/%f.out", t);
 	lola(outname, (t*2.0*pi/w), aalpha, apsi, cphi, sphi, cthet, sthet, h);
 	fprintf(out2, "%f %f\n", t, F);
-		printf("%f %f\n", t, F);
+	//	printf("%f %f\n", t, F);
 }
 fprintf(out1, "unset output\n");
 fclose(out1);

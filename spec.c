@@ -35,6 +35,8 @@ char outname[35];
 
 FILE *out1, *out2;
 
+ printf("Hello! I'm making a special relativistic star with no gravity!\n");
+
 dphi=2.0*pi/((double) np);  
 dtheta=2.0*pi/((double) np);
 
